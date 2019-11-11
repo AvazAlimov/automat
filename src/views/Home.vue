@@ -7,7 +7,6 @@
             img.mr-3(:src="require('@/assets/logo2x.png')" height="100" contain)
           v-col(sm="12")
             .display-3.white--text.font-weight-bold КОВРИКИ НА ВЕСЬ СПЕКТР
-              .headline.white--text НАСТРОЙТЕ С НАМИ!
     v-row.my-6
     v-row
       v-col(cols="12" sm="12" md="6")

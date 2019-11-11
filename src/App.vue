@@ -31,14 +31,29 @@
           v-col(sm="12" md="4" cols="12")
             .subtitle-1.font-weight-bold Мы в соцсетях
             .mt-2
-              v-icon.mr-2(small) mdi-facebook
-              span.body-2 fb.com/automat
+              a(
+                href="//www.facebook.com/AutoMatuz-109201373863566/"
+                target="_blank"
+                style="text-decoration: none; color: #333"
+              )
+                v-icon.mr-2(small) mdi-facebook
+                span.body-2 fb.com/AutoMatuz
             .mt-2
-              v-icon.mr-2(small) mdi-instagram
-              span.body-2 @automat
+              a(
+                href="//www.instagram.com/automat.uz/"
+                target="_blank"
+                style="text-decoration: none; color: #333"
+              )
+                v-icon.mr-2(small) mdi-instagram
+                span.body-2 instagram.com/automat.uz
             .mt-2
-              v-icon.mr-2(small) mdi-telegram
-              span.body-2 t.me/automat
+              a(
+                href="//t.me/automatuz"
+                target="_blank"
+                style="text-decoration: none; color: #333"
+              )
+                v-icon.mr-2(small) mdi-telegram
+                span.body-2 t.me/automatuz
         v-row
           v-col(sm="12")
             v-divider
