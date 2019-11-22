@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    v-img(:src="require('@/assets/banner.png')" height="640")
+    v-img(:src="require('@/assets/banner.jpg')" height="640")
       v-container(align-center fill-height)
         v-row.text-center
           v-col(sm="12")
@@ -31,9 +31,9 @@
     v-row.my-6
     v-row(no-gutters)
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/1.jpg')" height="320")
+        v-img(:src="require('@/assets/01.jpg')" height="320")
           v-container(fill-height align-end)
-            v-col.text-end.white--text
+            v-col.text-end
               .headline ДЛЯ
               .headline.font-weight-bold АВТОМОБИЛЯ
               p.body-2.mt-2
@@ -46,9 +46,9 @@
                 | и обрезок острых каблуков, что<br>
                 | способствует изнашивание коврика.
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/2.jpg')" height="320")
+        v-img(:src="require('@/assets/02.jpg')" height="320")
           v-container(fill-height align-end)
-            v-col
+            v-col.white--text
               .headline ДЛЯ
               .headline.font-weight-bold БЫТОВОГО НАЗНАЧЕНИЯ
               p.body-2.mt-2
@@ -62,7 +62,7 @@
                 | орнаменты.
 
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/3.jpg')" height="320")
+        v-img(:src="require('@/assets/03.jpg')" height="320")
           v-container(fill-height align-center)
             v-col.text-end
               .headline.font-weight-bold ЗВУКОИЗОЛЯЦИЯ
@@ -96,7 +96,7 @@
                 | распространения неприятного запаха.
 
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/5.jpg')" height="320")
+        v-img(:src="require('@/assets/05.jpg')" height="320")
           v-container
             v-col.text-end.white--text
               .headline.font-weight-bold ПРОТИВОСКОЛЬЗЯЩЕЕ
