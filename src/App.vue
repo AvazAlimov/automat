@@ -4,9 +4,9 @@
       v-toolbar-title
         v-img(:src="require('@/assets/logo_black.png')" width="60" contain)
       v-spacer
-      v-btn(text) Главная
-      v-btn(text) Продукты
-      v-btn(text) Контакты
+      v-btn(text @click="$router.push('/#main')") Главная
+      v-btn(text @click="$router.push('/#products')") Продукты
+      v-btn(text @click="$router.push('/#contacts')") Контакты
     v-content.pa-0
       router-view
     v-footer(padless)
@@ -14,10 +14,22 @@
         v-row.text-center
           v-col(sm="12" md="4" cols="12")
             .subtitle-1.font-weight-bold Разделы
-            .body-2.mt-2 Главная
-            .body-2.mt-2 Продукты
-            .body-2.mt-2 Контакты
-          v-col(sm="12" md="4" cols="12")
+            a(
+              href="#main"
+              style="text-decoration: none; color: #333"
+            )
+              .body-2.mt-2 Главная
+            a(
+              href="#products"
+              style="text-decoration: none; color: #333"
+            )
+              .body-2.mt-2 Продукты
+            a(
+              href="#contacts"
+              style="text-decoration: none; color: #333"
+            )
+              .body-2.mt-2 Контакты
+          v-col#contacts(sm="12" md="4" cols="12")
             .subtitle-1.font-weight-bold Контакты
             .mt-2
               v-icon.mr-2(small) mdi-phone-outline

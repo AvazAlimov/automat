@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    v-img(:src="require('@/assets/banner.png')" height="640")
+    v-img#main(:src="require('@/assets/banner.png')" height="640")
       v-container(align-center fill-height)
         v-row.text-center
           v-col(sm="12")
@@ -8,7 +8,7 @@
           v-col(sm="12")
             .display-3.white--text.font-weight-bold КОВРИКИ НА ВЕСЬ СПЕКТР
     v-row.my-6
-    v-row
+    v-row#products
       v-col(cols="12" sm="12" md="6")
         .display-1 Коврики
       v-col(cols="12" sm="12" md="6")
@@ -24,10 +24,14 @@
     v-row
       template(v-for="(product, index) in filteredProducts")
         v-col(sm="12" md="4" cols="12")
-          v-img.white(:src="product.image" height="300")
+          v-img.white(
+            :lazy-src="require('@/assets/no_image.png')"
+            :src="product.image"
+            height="300"
+          )
     v-row
       v-col.text-center
-        v-btn(text large outlined) Показать всё
+        v-btn(text large outlined @click="show=true") Показать всё
     v-row.my-6
     v-row(no-gutters)
       v-col(sm="12" md="6" cols="12")
@@ -124,11 +128,40 @@
                 | коврики-дорожки для бассейнов,<br>
                 | ванных комнат и других использующееся<br>
                 | для бытового назначения.
+
+    v-dialog(v-model="show" fullscreen hide-overlay)
+      v-card
+        v-card-title
+          v-spacer
+          v-btn(icon @click="show=false")
+            v-icon mdi-close
+        v-card-text
+          v-tabs(
+            v-model="type"
+            grow
+            color="black"
+            slider-size="0"
+            background-color="transparent"
+            transition="dialog-bottom-transition"
+          )
+            v-tab Автомобильные
+            v-tab Для прихожей
+            v-tab Прочие
+          v-container.pa-0(fluid)
+            v-row
+              template(v-for="(product, index) in products")
+                v-col(sm="12" md="4" cols="12" v-if="parseInt(product.type) == type + 1")
+                  v-img.white(
+                    :src="product.image"
+                    :lazy-src="require('@/assets/no_image.png')"
+                    height="300"
+                  )
 </template>
 <script>
 export default {
   name: 'home',
   data: () => ({
+    show: false,
     type: 0,
     products: [],
   }),
