@@ -1,6 +1,6 @@
 <template lang="pug">
   v-container
-    v-img(:src="require('@/assets/banner.jpg')" height="640")
+    v-img(:src="require('@/assets/banner.png')" height="640")
       v-container(align-center fill-height)
         v-row.text-center
           v-col(sm="12")
@@ -60,7 +60,6 @@
                 | на верхним слою разработаны<br>
                 | специально учитывая национальные<br>
                 | орнаменты.
-
       v-col(sm="12" md="6" cols="12")
         v-img(:src="require('@/assets/03.jpg')" height="320")
           v-container(fill-height align-center)
@@ -79,7 +78,7 @@
                 | намного комфортнее.
 
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/4.jpg')" height="320")
+        v-img(:src="require('@/assets/04.jpg')" height="320")
           v-container(fill-height align-center)
             v-col.white--text
               .headline.font-weight-bold ГИДРОИЗОЛЯЦИЯ
@@ -110,7 +109,7 @@
                 | фиксируется в этом положении.
 
       v-col(sm="12" md="6" cols="12")
-        v-img(:src="require('@/assets/6.jpg')" height="320")
+        v-img(:src="require('@/assets/06.jpg')" height="320")
           v-container
             v-col
               .headline.font-weight-bold ДИЗАЙН
