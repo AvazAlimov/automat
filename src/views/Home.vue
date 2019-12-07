@@ -156,6 +156,7 @@
                     :lazy-src="require('@/assets/no_image.png')"
                     height="300"
                   )
+                  .body-1 {{ product.description }}
 </template>
 <script>
 export default {
